@@ -92,8 +92,3 @@ const arregloPalabra= palabraOriginal.split(' - ');
 const salida= arregloPalabra.join('-')
 console.log(salida);
 */
-
-// Invertir un arreglo
-
-const nuevosEmojis2= emojis.reverse()
-console.log(nuevosEmojis2);
