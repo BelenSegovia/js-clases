@@ -26,6 +26,10 @@ const pelicula = {
     },
     pausar: ()=> {
         document.write('La pel{icula está pausada');
+    },
+    mostrarDatos(){
+        //como no puedo llamar al objeto dentro del mismo objeto, utilizo THIS para acceder a la propiedad, titulo
+        document.write(`${this.titulo}`);
     }
 }
 
@@ -64,4 +68,6 @@ delete pelicula.estreno
 
 // Accedemos al método de nuestro Objeto. Como es función va con ()
 pelicula.reproducir()
+
+pelicula.mostrarDatos()
 
