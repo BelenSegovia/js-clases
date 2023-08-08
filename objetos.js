@@ -17,10 +17,51 @@ const pelicula = {
     //  }
 
     //métodos
-    reproducir: function(){
+    reproducir(){
+        //más utilizado
         document.write('La película se está reproduciendo');
+    },
+    adelantar: function(){
+        document.write('La película se está avanzanda rápidamente');
     },
     pausar: ()=> {
         document.write('La pel{icula está pausada');
     }
 }
+
+
+// ACCEDIENDO A LAS PROPIEDADES DE NUESTRO OBJETO-PELICULA 
+
+
+console.log(pelicula);
+// document.write(pelicula);
+
+// object de tipo Object
+document.write(`<h5>${pelicula}</h5>`);
+//accedemos a la propiedad título de nuestro obj pelicula
+document.write(`<h1>${pelicula.titulo}</h1>`);
+console.log(pelicula.titulo);
+// accedemos a la propiedad genero de nuestro obj pelicula
+document.write(`<h2>${pelicula.genero}</h2>`);
+
+//otra forma de acceder a la propiedad fecha de estreno de nuestro obj pelicula
+//poco común
+document.write(`<p>${pelicula['fechaDeEstreno']}</p>`);
+
+
+// MODIFICANDO LAS PROPIEDADES DE NUESTRO OBJETO
+
+pelicula.duracion= '2:00',
+document.write(`<p>${pelicula.duracion}</p>`);
+
+// Agregar una propiedad a solo 1 objeto
+pelicula.clasificacion= '+13',
+console.log(pelicula);
+
+// Eliminar una propiedad a mi objeto
+//No se suele utilizar, pero existe
+delete pelicula.estreno
+
+// Accedemos al método de nuestro Objeto. Como es función va con ()
+pelicula.reproducir()
+
